@@ -3,347 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema RADAR: Genera 15-30 Leads Diarios en WhatsApp Automáticamente</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sistema RADAR | Escala tus Ventas con Meta Ads</title>
+    <meta name="description" content="Ayudamos a e-commerce a escalar sus ventas mediante el sistema RADAR.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <style>
-        :root { --amarillo: #FFD700; --negro: #000; --gris: #333; }
-        body { font-family: 'Arial', sans-serif; background: #f8f9fa; color: var(--negro); }
-        .hero { background: linear-gradient(to right, var(--amarillo), var(--negro)); color: white; padding: 60px 0; text-align: center; }
-        .section { padding: 50px 0; }
-        .bg-amarillo { background: var(--amarillo); color: var(--negro); }
-        .bg-negro { background: var(--negro); color: white; }
-        .cta-btn { background: var(--negro); color: var(--amarillo); border: 2px solid var(--amarillo); font-weight: bold; padding: 15px 30px; border-radius: 50px; }
-        .cta-btn:hover { background: var(--amarillo); color: var(--negro); }
-        .icon { font-size: 2em; margin-right: 10px; }
-        .testimonial { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin: 10px 0; }
+        body { font-family: 'Inter', sans-serif; }
+        .gold-gradient {
+            background: linear-gradient(90deg, #FCD34D 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(245, 158, 11, 0.5);
+        }
     </style>
 </head>
-<body>
+<body class="bg-gray-950 text-white overflow-x-hidden">
 
-    <!-- Hero Section: Atención inmediata con dolor/solución -->
-    <section class="hero">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-4">¿Cansado de Gastar en Anuncios de Meta que No Generan Ventas?</h1>
-            <p class="lead mb-4">Con el <strong>Sistema RADAR</strong>, configura una vez y recibe <strong>15-30 mensajes calificados en WhatsApp al día</strong>. Duplica tus leads sin esfuerzo, enfócate en cerrar ventas. ¡Para emprendedores en Latam con presupuestos bajos!</p>
-            <a href="https://wa.me/1234567890?text=Quiero%20configurar%20RADAR%20ahora" class="cta-btn btn btn-lg me-3">¡Configura por $90 Hoy! (Oferta Limitada)</a>
-            <p class="small mt-3">Garantía: 100% reembolso si no ves leads en 7 días.</p>
+    <nav class="w-full py-6 px-4 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-2xl font-bold tracking-tighter">Braulio<span class="text-yellow-500">Betancourt</span></div>
+        <a href="#agendar" class="hidden md:block bg-white text-black px-6 py-2 rounded-full font-semibold hover:bg-gray-200 transition">Agendar Llamada</a>
+    </nav>
+
+    <header class="relative pt-12 pb-20 px-4 md:px-6 text-center max-w-5xl mx-auto">
+        <div class="inline-block border border-yellow-500/30 bg-yellow-500/10 rounded-full px-4 py-1 mb-6 text-yellow-400 text-sm font-medium animate-pulse">
+            🚀 Especializado en E-commerce y Meta Ads
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            Escala tu Facturación con el <br>
+            <span class="gold-gradient">Sistema RADAR™</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl mb-10 max-w-3xl mx-auto">
+            Deja de quemar dinero en anuncios. Implementamos una infraestructura de datos y creativos para escalar tus ventas de forma predecible y rentable.
+        </p>
+        
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <a href="#agendar" class="btn-primary text-black font-bold text-lg px-8 py-4 rounded-lg w-full md:w-auto">
+                Quiero Escalar mi Negocio 👉
+            </a>
+            <p class="text-sm text-gray-500 mt-2 md:mt-0">Garantía de satisfacción o devolvemos tu fee.</p>
+        </div>
+
+        <div class="mt-16 relative">
+            <div class="absolute inset-0 bg-yellow-500 blur-[100px] opacity-20"></div>
+            <img src="https://placehold.co/1200x600/1f2937/FFF?text=Dashboard+Resultados+RADAR" alt="Dashboard Resultados" class="relative z-10 rounded-xl border border-gray-800 shadow-2xl mx-auto">
+        </div>
+    </header>
+
+    <section class="border-y border-gray-800 bg-gray-900/50 py-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <h3 class="text-3xl font-bold text-white">+10M</h3>
+                <p class="text-gray-500 text-sm">Impresiones Generadas</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold text-white">4.5x</h3>
+                <p class="text-gray-500 text-sm">ROAS Promedio</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold text-white">+50</h3>
+                <p class="text-gray-500 text-sm">Clientes Felices</p>
+            </div>
+            <div>
+                <h3 class="text-3xl font-bold text-white">$2.5M</h3>
+                <p class="text-gray-500 text-sm">Ventas Generadas</p>
+            </div>
         </div>
     </section>
 
-    <!-- ¿Por Qué Funciona? Interés con beneficios -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">¿Por Qué el Sistema RADAR Transforma Tus Campañas?</h2>
-            <div class="row text-center">
-                <div class="col-md-3 mb-4">
-                    <div class="icon">📈</div>
-                    <h4>15-30 Mensajes/Día</h4>
-                    <p>Leads directos a WhatsApp, listos para vender. No más clics perdidos.</p>
+    <section class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Te suena familiar esta situación? 🛑</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-red-500/50 transition duration-300">
+                <div class="bg-red-500/20 w-12 h-12 flex items-center justify-center rounded-lg mb-6 text-red-500">
+                    <i class="ph ph-trend-down text-2xl"></i>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon">🚀</div>
-                    <h4>ROI 2.8x en Promedio</h4>
-                    <p>Recupera tu inversión en semanas con campañas optimizadas por IA.</p>
+                <h3 class="text-xl font-bold mb-3">ROAS Inestable</h3>
+                <p class="text-gray-400">Un día vendes bien y al siguiente nada. No tienes previsibilidad y te da miedo escalar el presupuesto.</p>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-red-500/50 transition duration-300">
+                <div class="bg-red-500/20 w-12 h-12 flex items-center justify-center rounded-lg mb-6 text-red-500">
+                    <i class="ph ph-mask-sad text-2xl"></i>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon">⚡</div>
-                    <h4>Setup en 5-7 Días</h4>
-                    <p>Configuración rápida, sin complicaciones técnicas.</p>
+                <h3 class="text-xl font-bold mb-3">Agencias que "Postean"</h3>
+                <p class="text-gray-400">Contrataste agencias que solo suben imágenes bonitas pero no se preocupan por la rentabilidad ni las ventas.</p>
+            </div>
+            <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 hover:border-red-500/50 transition duration-300">
+                <div class="bg-red-500/20 w-12 h-12 flex items-center justify-center rounded-lg mb-6 text-red-500">
+                    <i class="ph ph-robot text-2xl"></i>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon">🏆</div>
-                    <h4>Resultados en 24-48h</h4>
-                    <p>Primeros leads en menos de 2 días. ¡Prueba y vende ya!</p>
+                <h3 class="text-xl font-bold mb-3">Bloqueos de Meta</h3>
+                <p class="text-gray-400">Vives con miedo a que Facebook bloquee tu cuenta publicitaria y detenga todo tu flujo de caja.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-yellow-500 font-semibold tracking-wide uppercase text-sm">La Solución</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-2">Sistema RADAR™: Listo para Usar</h2>
+                <p class="text-gray-400 mt-4 max-w-2xl mx-auto">No improvisamos. Usamos un método probado de 6 fases para garantizar resultados.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:bg-gray-800 transition">
+                    <i class="ph ph-magnifying-glass text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="text-lg font-bold text-white">1. Auditoría Profunda</h4>
+                    <p class="text-gray-500 text-sm mt-2">Analizamos tus métricas pasadas para encontrar fugas de dinero.</p>
+                </div>
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:bg-gray-800 transition">
+                    <i class="ph ph-target text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="text-lg font-bold text-white">2. Estrategia Creativa</h4>
+                    <p class="text-gray-500 text-sm mt-2">Diseñamos los ángulos de venta que persuaden a tu cliente ideal.</p>
+                </div>
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:bg-gray-800 transition">
+                    <i class="ph ph-chart-line-up text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="text-lg font-bold text-white">3. Tracking Server-Side</h4>
+                    <p class="text-gray-500 text-sm mt-2">Configuramos el pixel y CAPI para que iOS14 no afecte tus datos.</p>
+                </div>
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:bg-gray-800 transition">
+                    <i class="ph ph-rocket-launch text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="text-lg font-bold text-white">4. Lanzamiento y Testeo</h4>
+                    <p class="text-gray-500 text-sm mt-2">Probamos audiencias y creativos con bajo presupuesto rápidamente.</p>
+                </div>
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:bg-gray-800 transition">
+                    <i class="ph ph-arrows-out text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="text-lg font-bold text-white">5. Escalamiento</h4>
+                    <p class="text-gray-500 text-sm mt-2">Aumentamos el presupuesto solo en lo que ya demostró ser rentable.</p>
+                </div>
+                <div class="bg-gray-950 border border-gray-800 p-6 rounded-xl hover:bg-gray-800 transition">
+                    <i class="ph ph-file-text text-yellow-500 text-3xl mb-4"></i>
+                    <h4 class="text-lg font-bold text-white">6. Reportes Claros</h4>
+                    <p class="text-gray-500 text-sm mt-2">Sabrás exactamente cuánto retorno te trae cada dólar invertido.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ¿Te Suena Familiar? Empatía con dolores -->
-    <section class="section bg-negro">
-        <div class="container">
-            <h2 class="text-center mb-5 text-white">¿Te Suena Familiar? Los Errores que Matan Tus Anuncios</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <img src="https://via.placeholder.com/300x200?text=Presupuestos+Desperdiciados" alt="Presupuestos desperdiciados" class="img-fluid rounded">
-                    <h5 class="text-white mt-3">Presupuestos Desperdiciados</h5>
-                    <p class="text-white">Gastas $50/día en clics que nunca llegan a ventas.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="https://via.placeholder.com/300x200?text=Bloqueos+de+Cuenta" alt="Bloqueos de cuenta" class="img-fluid rounded">
-                    <h5 class="text-white mt-3">Bloqueos de Cuenta</h5>
-                    <p class="text-white">Meta te veta por errores comunes que yo evito.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="https://via.placeholder.com/300x200?text=Bloqueos+de+Cuenta" alt="Leads fríos" class="img-fluid rounded">
-                    <h5 class="text-white mt-3">Leads Fríos sin Interés</h5>
-                    <p class="text-white">Mensajes genéricos que no convierten. RADAR los califica automáticamente.</p>
-                </div>
+    <section class="py-20 px-4 max-w-5xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">¿Cómo trabajaremos?</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-900 rounded-2xl p-8 border border-gray-800">
+                <h3 class="text-2xl font-bold mb-6 text-gray-400">Lo que TÚ pones</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle text-gray-500 mt-1"></i>
+                        <span class="text-gray-300">Producto validado y stock disponible.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle text-gray-500 mt-1"></i>
+                        <span class="text-gray-300">Presupuesto publicitario (Ad Spend).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle text-gray-500 mt-1"></i>
+                        <span class="text-gray-300">Material visual base (fotos/videos).</span>
+                    </li>
+                </ul>
             </div>
-            <div class="text-center mt-4">
-                <a href="https://wa.me/1234567890?text=Evita+estos+errores" class="cta-btn btn btn-lg">¡Evítalos con RADAR Ahora!</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Configuración: Simplificado -->
-    <section class="section bg-amarillo">
-        <div class="container">
-            <h2 class="text-center mb-5">Configuración RADAR: Lista para Vender en Minutos</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <h5><span class="icon">🔧</span> Configuración Profesional</h5>
-                    <p>Yo manejo todo: pixel, campañas y optimización inicial.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5><span class="icon">💰</span> Campañas con Contenido</h5>
-                    <p>3 creativos personalizados con IA para maximizar clics.</p>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <h5><span class="icon">📱</span> Integración WhatsApp</h5>
-                    <p>Chats automáticos y secuencias para nutrir leads.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Cómo Funciona: 4 Pasos Visuales -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Cómo Funciona en 4 Pasos Simples</h2>
-            <div class="row text-center">
-                <div class="col-md-3 mb-4">
-                    <div class="bg-amarillo p-4 rounded">
-                        <h4>01. Diagnóstico Express (30 min)</h4>
-                        <p>Analizo tu negocio y objetivos para una estrategia personalizada.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="bg-amarillo p-4 rounded">
-                        <h4>02. Creación y Lanzamiento (3-5 días)</h4>
-                        <p>Armo 3 campañas con material y contenido listo para Meta.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="bg-amarillo p-4 rounded">
-                        <h4>03. Optimización Continua (24-48h)</h4>
-                        <p>Ajustes en vivo para maximizar leads en WhatsApp.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="bg-amarillo p-4 rounded">
-                        <h4>04. Soporte y Escala</h4>
-                        <p>Monitoreo mensual + tips para crecer sin límites.</p>
-                    </div>
-                </div>
+            
+            <div class="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-2xl p-8 shadow-lg relative transform md:scale-105">
+                <div class="absolute -top-4 right-4 bg-white text-black text-xs font-bold px-3 py-1 rounded-full uppercase">Todo Incluido</div>
+                <h3 class="text-2xl font-bold mb-6 text-white">Lo que YO pongo</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle-fill text-white mt-1"></i>
+                        <span class="text-white font-medium">Estrategia completa de embudo.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle-fill text-white mt-1"></i>
+                        <span class="text-white font-medium">Redacción persuasiva (Copywriting).</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle-fill text-white mt-1"></i>
+                        <span class="text-white font-medium">Edición de video para anuncios ganadores.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle-fill text-white mt-1"></i>
+                        <span class="text-white font-medium">Gestión diaria de campañas y optimización.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="ph ph-check-circle-fill text-white mt-1"></i>
+                        <span class="text-white font-medium">Reportes semanales en vivo.</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Tu Inversión vs. Mi Expertise: Claridad en valor -->
-    <section class="section bg-negro">
-        <div class="container">
-            <h2 class="text-center mb-5 text-white">¿Qué Inviertes Tú vs. Qué Te Doy Yo?</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <h4 class="text-white">Tu Inversión Mínima</h4>
-                    <ul class="list-unstyled">
-                        <li class="text-white mb-2">• Acceso a Meta Ads ($5-10/día)</li>
-                        <li class="text-white mb-2">• Respuestas en WhatsApp (tu expertise)</li>
-                        <li class="text-white mb-2">• Verificación de leads (1-2h/semana)</li>
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Modos de Operación</h2>
+            <p class="text-gray-400 mb-12">Elige cómo quieres que colaboremos</p>
+
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="border border-gray-700 p-8 rounded-xl bg-gray-950">
+                    <h3 class="text-xl font-bold text-white mb-2">Opción A: Consultoría</h3>
+                    <p class="text-sm text-gray-500 mb-6">"Done WITH You" (Lo hacemos juntos)</p>
+                    <ul class="space-y-3 mb-8 text-gray-300 text-sm">
+                        <li>• Auditoría en vivo</li>
+                        <li>• Hoja de ruta estratégica</li>
+                        <li>• 4 Llamadas mensuales</li>
                     </ul>
+                    <a href="#" class="block w-full text-center border border-white py-3 rounded-lg hover:bg-white hover:text-black transition">Ver Detalles</a>
                 </div>
-                <div class="col-md-6">
-                    <h4 class="text-white">Mi Expertise Completa</h4>
-                    <ul class="list-unstyled">
-                        <li class="text-white mb-2">• Configuración total (Pixel, campañas, IA)</li>
-                        <li class="text-white mb-2">• 3 creativos mensuales</li>
-                        <li class="text-white mb-2">• Soporte 24/7 + prevención de bloqueos</li>
+                <div class="border border-yellow-500 p-8 rounded-xl bg-gray-900 relative">
+                    <div class="absolute top-0 right-0 bg-yellow-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">MÁS POPULAR</div>
+                    <h3 class="text-xl font-bold text-yellow-500 mb-2">Opción B: Agencia Partner</h3>
+                    <p class="text-sm text-gray-400 mb-6">"Done FOR You" (Lo hago por ti)</p>
+                    <ul class="space-y-3 mb-8 text-white text-sm">
+                        <li>• Gestión 100% delegada</li>
+                        <li>• Creación de creativos incluida</li>
+                        <li>• Acceso a Slack privado</li>
                     </ul>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="https://wa.me/1234567890?text=Detalles+de+inversion" class="cta-btn btn btn-lg">¡Empieza por $90!</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Modos: Simplificado -->
-    <section class="section bg-amarillo">
-        <div class="container">
-            <h2 class="text-center mb-5">Elige Tu Modo: Tú Decides Cómo Escalar</h2>
-            <div class="row text-center">
-                <div class="col-md-6 mb-4">
-                    <h4>Modo Base (Recomendado)</h4>
-                    <p>Configuración manual + respuestas en 24h. Ideal para starters. Incluye 1 campaña.</p>
-                </div>
-                <div class="col-md-6 mb-4">
-                    <h4>Modo Avanzado</h4>
-                    <p>Setup en 7 días + 3 campañas. Soporte ilimitado y escalado auto.</p>
+                    <a href="#" class="block w-full text-center bg-yellow-500 text-black font-bold py-3 rounded-lg hover:bg-yellow-400 transition">Aplicar Ahora</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Resultados: Testimonios para Confianza -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Resultados Reales: Emprendedores Como Tú</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <p>"De 0 a 25 leads/día en Bogotá. ROI 3x en el primer mes. ¡Increíble!"</p>
-                        <cite>- María López, Tienda Online en Colombia</cite>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <p>"Recuperé mi cuenta bloqueada y ahora vendo $2k/mes vía WhatsApp."</p>
-                        <cite>- Juan Pérez, Consultor en México</cite>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial">
-                        <p>"Estudio en Medellín: 18-22 leads semanales por $90. Vale cada peso."</p>
-                        <cite>- Ana García, Estudio de Belleza</cite>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="https://wa.me/1234567890?text=Quiero+resultados+como+estos" class="cta-btn btn btn-lg">¡Únete a +500 Emprendedores Exitosos!</a>
-            </div>
+    <section class="py-20 px-4 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+            <img src="https://placehold.co/500x500/333/FFF?text=Foto+Braulio" alt="Braulio Betancourt" class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition duration-500">
         </div>
-    </section>
-
-    <!-- Problemas con Meta: Soluciones + Confianza -->
-    <section class="section bg-negro">
-        <div class="container">
-            <h2 class="text-center mb-5 text-white">¿Problemas con Meta Ads? Yo los Soluciono</h2>
-            <div class="row text-center">
-                <div class="col-md-3 mb-4">
-                    <h5 class="text-white">Cuentas Bloqueadas</h5>
-                    <p class="text-white">Recupero y configuro con métodos validados.</p>
+        <div class="md:w-1/2">
+            <h4 class="text-yellow-500 font-bold mb-2">¿Quién soy?</h4>
+            <h2 class="text-4xl font-bold mb-6">Soy Braulio Betancourt</h2>
+            <p class="text-gray-400 mb-6 leading-relaxed">
+                Especialista en Meta Ads y embudos de venta. He gestionado presupuestos desde $500 hasta $50,000 mensuales, ayudando a marcas a escalar sin depender de la suerte.
+                <br><br>
+                Mi filosofía es simple: <strong>Datos matan opiniones.</strong> No adivino qué anuncio funcionará, dejo que el sistema RADAR me lo diga.
+            </p>
+            <div class="flex gap-4">
+                <div class="bg-gray-800 px-4 py-2 rounded-lg text-center">
+                    <span class="block text-2xl font-bold text-white">4+</span>
+                    <span class="text-xs text-gray-500">Años Exp.</span>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="text-white">Páginas Rechazadas</h5>
-                    <p class="text-white">Auditoría gratis + creativos compliant.</p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="text-white">Anuncios No Aprobados</h5>
-                    <p class="text-white">Soporte especializado 24/7.</p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <h5 class="text-white">Verificación Pendiente</h5>
-                    <p class="text-white">Te guío paso a paso, sin riesgos.</p>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="https://wa.me/1234567890?text=Soporte+Meta" class="cta-btn btn btn-lg">¡Recupera Tu Cuenta Gratis!</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beneficios: Deseo -->
-    <section class="section bg-amarillo">
-        <div class="container">
-            <h2 class="text-center mb-5">Beneficios que Cambian Tu Negocio</h2>
-            <div class="row text-center">
-                <div class="col-md-3 mb-4">
-                    <div class="icon">⏰</div>
-                    <h5>Ahorra Tiempo</h5>
-                    <p>Automatiza lo tedioso, enfócate en ventas.</p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon">🤝</div>
-                    <h5>Construye Confianza</h5>
-                    <p>Leads calificados que cierran más rápido.</p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon">📈</div>
-                    <h5>Escala Fácil</h5>
-                    <p>Software listo para crecer sin límites.</p>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div class="icon">🛡️</div>
-                    <h5>Soporte Premium</h5>
-                    <p>Yo manejo los riesgos de Meta por ti.</p>
+                <div class="bg-gray-800 px-4 py-2 rounded-lg text-center">
+                    <span class="block text-2xl font-bold text-white">$2M+</span>
+                    <span class="text-xs text-gray-500">Facturados</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre Mí: Confianza Personal -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Soy Braun Betancourt</h2>
-            <p class="text-center lead">Especialista en Meta Ads con 5+ años ayudando a emprendedores en Colombia, México, Argentina y Chile. He configurado +500 sistemas RADAR, desbloqueando millones en ventas vía WhatsApp.</p>
-            <div class="text-center">
-                <img src="https://via.placeholder.com/200x200?text=Braun+Betancourt" alt="Braun Betancourt" class="rounded-circle mb-3" style="width: 200px; height: 200px;">
-                <a href="https://linkedin.com/in/braunbetancourt" class="btn btn-outline-dark">Conéctate en LinkedIn</a>
+    <section class="py-20 bg-gray-900">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Preguntas Frecuentes</h2>
+            <div class="space-y-4">
+                <details class="bg-gray-950 p-6 rounded-xl group cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-semibold text-lg text-white">
+                        ¿Cuánto presupuesto necesito para empezar?
+                        <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-yellow-500"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed">Recomendamos un mínimo de $1,000 USD mensuales en inversión publicitaria (pagados a Meta) para que el sistema tenga suficientes datos para optimizar.</p>
+                </details>
+                <details class="bg-gray-950 p-6 rounded-xl group cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-semibold text-lg text-white">
+                        ¿Trabajas con cualquier nicho?
+                        <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-yellow-500"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed">Me especializo en E-commerce, Info-productos y Servicios High-Ticket. Si vendes productos físicos o cursos, soy tu mejor opción.</p>
+                </details>
+                <details class="bg-gray-950 p-6 rounded-xl group cursor-pointer">
+                    <summary class="list-none flex justify-between items-center font-semibold text-lg text-white">
+                        ¿Hay garantía de resultados?
+                        <i class="ph ph-caret-down group-open:rotate-180 transition-transform text-yellow-500"></i>
+                    </summary>
+                    <p class="text-gray-400 mt-4 leading-relaxed">Sí. Si implementamos el sistema RADAR y no generamos un retorno positivo o mejora en tus métricas actuales en 90 días, trabajo gratis hasta lograrlo.</p>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- FAQs: Expandidas -->
-    <section class="section bg-negro">
-        <div class="container">
-            <h2 class="text-center mb-5 text-white">Preguntas Frecuentes</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">¿Cuánto cuesta configurar RADAR?</button></h2>
-                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-white">$90 una vez, + tu presupuesto Meta ($10/día min). ROI garantizado.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">¿Qué pasa si mi cuenta está bloqueada?</button></h2>
-                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-white">Te ayudo a recuperarla gratis en la config. 95% éxito.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">¿Necesito sitio web?</button></h2>
-                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-white">No, todo vía WhatsApp. Ideal para negocios locales.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4">¿Cómo garantizas resultados?</button></h2>
-                    <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-white">Prueba 7 días o reembolso total. +500 casos reales.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5">¿En qué países funciona?</button></h2>
-                    <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-white">Colombia, México, Argentina, Chile y más en Latam.</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6">¿Cuánto tiempo dura el soporte?</button></h2>
-                    <div id="q6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body text-white">Mensual ilimitado en Modo Avanzado. Respuesta en 2h.</div>
-                    </div>
-                </div>
-            </div>
+    <section id="agendar" class="py-24 px-4 text-center">
+        <div class="max-w-4xl mx-auto bg-gradient-to-b from-gray-800 to-gray-900 p-12 rounded-3xl border border-gray-700">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">¿Listo para Escalar?</h2>
+            <p class="text-xl text-gray-400 mb-10">Agenda una llamada de cualificación de 15 minutos. Sin presiones de venta, solo veremos si podemos ayudarte.</p>
+            
+            <button class="btn-primary text-black font-bold text-xl px-10 py-5 rounded-lg w-full md:w-auto shadow-xl hover:shadow-yellow-500/20">
+                Agendar Mi Llamada Ahora 📅
+            </button>
+            <p class="mt-6 text-sm text-gray-500">Solo 4 cupos disponibles para este mes.</p>
         </div>
     </section>
 
-    <!-- CTA Final: Acción Urgente -->
-    <section class="section bg-amarillo text-center">
-        <div class="container">
-            <h2 class="mb-4">¡No Esperes Más Leads Perdidos!</h2>
-            <p class="lead mb-4">Configura RADAR hoy y transforma tus anuncios en ventas reales. Oferta: 20% off si contactas en 24h.</p>
-            <a href="https://wa.me/1234567890?text=Configura+RADAR+con+descuento" class="cta-btn btn btn-lg">¡Chatea Ahora y Empieza!</a>
+    <footer class="bg-black py-12 text-center text-gray-600 text-sm border-t border-gray-900">
+        <p>&copy; 2024 Braulio Betancourt. Todos los derechos reservados.</p>
+        <div class="flex justify-center gap-6 mt-4">
+            <a href="#" class="hover:text-white transition">Instagram</a>
+            <a href="#" class="hover:text-white transition">LinkedIn</a>
+            <a href="#" class="hover:text-white transition">Email</a>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-negro text-white text-center py-4">
-        <p>&copy; 2025 Sistema RADAR por Braun Betancourt. Todos los derechos reservados. | <a href="/privacidad" class="text-white">Privacidad</a> | <a href="/terminos" class="text-white">Términos</a></p>
-        <p>Desarrollado para emprendedores en Latam. Pagos seguros con Stripe.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
