@@ -1,244 +1,402 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema RADAR™ - 15-30 Leads Diarios en WhatsApp | ROI 2.8x en 48h</title>
-    <meta name="description" content="Configura Meta Ads + WhatsApp profesionalmente para recibir 15-30 mensajes de clientes listos para comprar. Setup en 5 días por solo $67. Sin bots caros. ¡Empieza hoy!">
-    <meta property="og:title" content="Sistema RADAR™ - Leads Calientes en WhatsApp">
-    <meta property="og:description" content="Recibe 15-30 mensajes diarios. ROI promedio 2.8x. Oferta limitada $67.">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/1877F2/FFFFFF?text=Sistema+RADAR">
-    <meta property="og:url" content="https://braulinfb.github.io/sistemaradar/">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body { 
-            font-family: 'Roboto', sans-serif; 
-            line-height: 1.6; 
-            margin: 0; 
-            color: #333; 
-            background-color: #f9f9f9; 
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        h1, h2, h3 { color: #1877F2; } /* Azul Meta */
-        h1 { font-size: 2.5em; text-align: center; margin-bottom: 10px; }
-        .hero { background: linear-gradient(to right, #1877F2, #00A884); color: white; padding: 60px 20px; text-align: center; }
-        .hero h1 { color: white; font-size: 3em; }
-        .hero p { font-size: 1.2em; margin: 20px 0; }
-        .cta-button { 
-            background: #00A884; /* Verde WhatsApp */ 
-            color: white; 
-            padding: 15px 30px; 
-            border: none; 
-            border-radius: 50px; 
-            font-size: 1.1em; 
-            cursor: pointer; 
-            text-decoration: none; 
-            display: inline-block; 
-            margin: 10px; 
-            transition: background 0.3s; 
-        }
-        .cta-button:hover { background: #089979; }
-        ul { list-style-type: none; padding-left: 0; }
-        ul li { margin: 10px 0; padding: 10px; background: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .emoji { font-size: 1.5em; }
-        .roi-box { background: #fff; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 20px 0; }
-        .roi-box strong { font-size: 3em; color: #00A884; }
-        .testimonials { display: flex; flex-wrap: wrap; justify-content: space-around; }
-        .testimonial { width: 30%; margin: 10px; padding: 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .urgency { background: #ff6b35; color: white; padding: 15px; text-align: center; margin: 20px 0; border-radius: 5px; }
-        .sticky-cta { 
-            position: fixed; 
-            bottom: 20px; 
-            right: 20px; 
-            z-index: 1000; 
-            background: #00A884; 
-            color: white; 
-            padding: 15px; 
-            border-radius: 50px; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
-        }
-        @media (max-width: 768px) { 
-            .hero h1 { font-size: 2em; } 
-            .testimonial { width: 100%; } 
-            .container { padding: 10px; } 
-        }
-        /* Countdown simple */
-        #countdown { font-weight: bold; color: #ff6b35; }
-    </style>
+    <title>Sistema Radar | Control y Monitoreo Satelital de Flotas</title>
+    <meta name="description" content="Plataforma de rastreo vehicular en tiempo real. Optimice su logística, prevenga robos y reduzca costos operativos con tecnología de precisión aeronáutica.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script>
-        // Sticky CTA ya en CSS
-        // Countdown simple (hasta 31/12/2025)
-        function updateCountdown() {
-            const end = new Date('2025-12-31T23:59:59');
-            const now = new Date();
-            const diff = end - now;
-            if (diff > 0) {
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                document.getElementById('countdown').innerHTML = days + ' días restantes';
-            } else {
-                document.getElementById('countdown').innerHTML = '¡Oferta terminada!';
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        radar: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
             }
         }
-        setInterval(updateCountdown, 86400000); // Actualiza diario
-        updateCountdown();
     </script>
+    
+    <style>
+        /* Estilos adicionales para animaciones suaves */
+       .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
-<body>
-    <a href="https://wa.me/573148676490?text=¡Hola!%20Quiero%20el%20Sistema%20RADAR%20por%20$67" class="sticky-cta">¡Empezar Ahora! 📱</a>
+<body class="font-sans text-slate-600 antialiased bg-white">
 
-    <section class="hero">
-        <div class="container">
-            <h1>Sistema RADAR™: 15-30 Leads Calientes Diarios en WhatsApp</h1>
-            <p>Imagina recibir mensajes de clientes listos para comprar, sin desperdiciar presupuesto en clics fríos. Meta Ads + WhatsApp configurados por expertos. Primeros resultados en 24-48h. ROI promedio 2.8x.</p>
-            <p><strong>Oferta limitada: Setup completo por solo $67 (valor $97)</strong></p>
-            <div class="roi-box">
-                <strong>2.8x</strong><br>
-                ROI Promedio en Campañas Optimizadas
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <div class="bg-radar-600 text-white p-1.5 rounded-lg">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <span class="font-bold text-2xl text-slate-900 tracking-tight">Sistema<span class="text-radar-600">Radar</span></span>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beneficios" class="text-slate-600 hover:text-radar-600 font-medium transition">Beneficios</a>
+                    <a href="#funcionalidades" class="text-slate-600 hover:text-radar-600 font-medium transition">Funcionalidades</a>
+                    <a href="#planes" class="text-slate-600 hover:text-radar-600 font-medium transition">Planes</a>
+                    <a href="#nosotros" class="text-slate-600 hover:text-radar-600 font-medium transition">Nosotros</a>
+                </div>
+
+                <div class="hidden md:flex">
+                    <a href="#contacto" class="bg-radar-600 hover:bg-radar-700 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-radar-500/30 transition transform hover:-translate-y-0.5">
+                        Solicitar Demo
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button @click="open =!open" class="text-slate-600 hover:text-radar-600 focus:outline-none p-2">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path x-show="!open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path x-show="open" x-cloak stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <a href="https://wa.me/573148676490?text=¡Hola!%20Quiero%20el%20Sistema%20RADAR%20por%20$67" class="cta-button">¡Activa RADAR Hoy! (5-7 Días Setup)</a>
-            <p><small>Sin software caro. Inversión en Ads aparte (mín. $5/día).</small></p>
+        </div>
+
+        <div x-show="open" x-collapse class="md:hidden bg-white border-t border-slate-100 shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#beneficios" @click="open = false" class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-radar-50 hover:text-radar-600 rounded-md">Beneficios</a>
+                <a href="#funcionalidades" @click="open = false" class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-radar-50 hover:text-radar-600 rounded-md">Funcionalidades</a>
+                <a href="#planes" @click="open = false" class="block px-3 py-3 text-base font-medium text-slate-600 hover:bg-radar-50 hover:text-radar-600 rounded-md">Planes</a>
+                <a href="#contacto" @click="open = false" class="block w-full text-center mt-4 bg-radar-600 text-white px-4 py-3 rounded-lg font-bold">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-50">
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-radar-100 border border-radar-200 text-radar-700 text-sm font-semibold mb-6">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-radar-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-radar-500"></span>
+                        </span>
+                        Monitoreo en Tiempo Real 24/7
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6 leading-tight">
+                        Recupere el Control Total de <span class="text-transparent bg-clip-text bg-gradient-to-r from-radar-600 to-indigo-600">Su Flota</span>
+                    </h1>
+                    
+                    <p class="text-xl text-slate-600 mb-8 leading-relaxed">
+                        Elimine la incertidumbre operativa. Sistema Radar combina precisión aeronáutica con facilidad de uso para proteger sus activos, reducir costos de combustible y optimizar rutas.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contacto" class="px-8 py-4 bg-radar-600 text-white rounded-xl font-bold text-lg shadow-xl shadow-radar-500/20 hover:bg-radar-700 transition transform hover:-translate-y-1 text-center">
+                            Empezar Ahora
+                        </a>
+                        <a href="#funcionalidades" class="px-8 py-4 bg-white text-slate-700 border border-slate-200 rounded-xl font-bold text-lg hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                            Ver Características
+                            <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-10 pt-6 border-t border-slate-200">
+                        <p class="text-sm text-slate-500 font-medium mb-3">Tecnología confiable para:</p>
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start text-slate-400 font-semibold">
+                            <span class="flex items-center gap-1"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg> Logística</span>
+                            <span class="flex items-center gap-1"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/><path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/></svg> Transporte</span>
+                            <span class="flex items-center gap-1"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/></svg> Rent-Car</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative lg:ml-10">
+                    <div class="absolute -inset-4 bg-radar-200 rounded-full opacity-30 blur-3xl animate-pulse"></div>
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard de Sistema Radar" class="relative rounded-2xl shadow-2xl border-4 border-white transform rotate-1 hover:rotate-0 transition duration-500">
+                    
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-slate-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                        <div class="bg-green-100 p-2 rounded-full">
+                            <svg class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-xs text-slate-500 font-bold uppercase">Estado del Sistema</p>
+                            <p class="font-bold text-slate-800">100% Operativo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <div class="container">
-        <h2>¿Por Qué Elegir Sistema RADAR™? Tu Negocio Transformado</h2>
-        <ul>
-            <li><span class="emoji">📈</span> <strong>15-30 Mensajes Diarios:</strong> Leads calientes que cierran ventas rápidas, ahorrándote horas de prospección fría.</li>
-            <li><span class="emoji">💰</span> <strong>ROI 2.8x Promedio:</strong> Cada dólar invertido genera $2.80 en ventas. Resultados reales, no promesas.</li>
-            <li><span class="emoji">⚡</span> <strong>Setup en 5-7 Días:</strong> Todo listo para lanzar, sin complicaciones técnicas que te roben tiempo.</li>
-            <li><span class="emoji">🛡️</span> <strong>Sin Bloqueos:</strong> Configuración experta que evita rechazos de Meta y mantiene tus campañas vivas.</li>
-        </ul>
-        <div class="urgency">
-            <strong>¡Oferta Exclusiva!</strong> Solo $67 hasta <span id="countdown"></span>. Después, $97. No esperes: <a href="https://wa.me/573148676490?text=¡Oferta%20$67!" style="color:white;">Chatea Ahora</a>
-        </div>
-
-        <h2>¿Te Suena Familiar? Los Dolores que Resuelvo</h2>
-        <ul>
-            <li><span class="emoji">💸</span> <strong>Presupuesto Desperdiciado:</strong> Gastas en anuncios, pero solo llegan clics sin intención. <em>Con RADAR: Leads que compran.</em></li>
-            <li><span class="emoji">🤖</span> <strong>Bots Caros e Ineficaces:</strong> Pagas $50-200/mes por respuestas robóticas que espantan clientes. <em>Con RADAR: Manual o IA opcional, con toque humano.</em></li>
-            <li><span class="emoji">🚫</span> <strong>Bloqueos Constantes:</strong> Cuentas suspendidas sin aviso. <em>Con RADAR: Prevención experta + recuperación rápida.</em></li>
-        </ul>
-
-        <h2>Cómo Funciona: 4 Pasos Simples para Tus Primeros Leads</h2>
-        <ol style="list-style-type: decimal; padding-left: 20px;">
-            <li><strong>Diagnóstico Express (30 min):</strong> Analizo tu negocio, competencia y audiencias. Estrategia personalizada gratis.</li>
-            <li><strong>Creativos + Lanzamiento (3-5 días):</strong> Creo 3 anuncios pro con tu material + IA (Google Veo 3). Lanzamos 3 campañas a WhatsApp.</li>
-            <li><strong>Optimización + Capacitación (24-48h):</strong> Te entrego guion de ventas, dashboards y primeros ajustes. ¡Ve resultados YA!</li>
-            <li><strong>Soporte Opcional ($29/mes):</strong> Optimizo mensualmente + nuevos creativos. Escala sin esfuerzo.</li>
-        </ol>
-        <a href="https://wa.me/573148676490?text=¡Empecemos%20el%20diagnóstico!" class="cta-button">Agenda Diagnóstico Gratis</a>
-
-        <h2>¿Qué Incluye? Tú y Yo en Acción</h2>
-        <table style="width:100%; border-collapse: collapse; margin:20px 0;">
-            <tr><th style="background:#1877F2; color:white; padding:10px;">Tú Pones</th><th style="background:#1877F2; color:white; padding:10px;">Yo Pongo (Valor $500+)</th></tr>
-            <tr><td style="padding:10px; vertical-align:top;">
-                <ul><li>Presupuesto Ads ($5-10/día)</li><li>Fotos/videos de productos</li><li>Respuestas en WhatsApp</li><li>Cierre de ventas</li></ul>
-            </td>
-            <td style="padding:10px; vertical-align:top;">
-                <ul><li>Configuración completa (Pixel, BM, Catálogo)</li><li>3 Campañas + 3 Anuncios Iniciales</li><li>Asesoría IA Pro (Google Veo 3: 50 videos, 2TB - 12 meses)</li><li>Capacitación Ventas + Dashboards</li><li>Soporte Técnico y Anti-Bloqueos</li></ul>
-            </td></tr>
-        </table>
-
-        <h2>Modos de Operación: Elige Tu Estilo</h2>
-        <h3>Modo Base - Manual (Ideal para Empezar)</h3>
-        <ul>
-            <li>15-30 mensajes/día con plantillas listas.</li>
-            <li>Control total, toque personal en ventas.</li>
-            <li>Incluye todo el setup por $67.</li>
-        </ul>
-        <p><strong>Perfecto para:</strong> Negocios con ticket alto, personalizados.</p>
-        <a href="https://wa.me/573148676490?text=¡Modo%20Base%20por%20$67!" class="cta-button">Activar Modo Base</a>
-
-        <h3>Modo Avanzado - Automatizado (Escala Fácil)</h3>
-        <ul>
-            <li>ChatGPT 24/7 + Calificación IA de leads.</li>
-            <li>Integración n8n/CRM para 50+ mensajes/día.</li>
-            <li>Cotización aparte (~$150 setup).</li>
-        </ul>
-        <p><strong>Perfecto para:</strong> Alto volumen. ¡Pregunta por demo!</p>
-        <a href="https://wa.me/573148676490?text=¡Cuéntame%20del%20Modo%20Avanzado!" class="cta-button">Consultar Avanzado</a>
-
-        <h2>Pruebas Reales: Casos de Éxito</h2>
-        <h3>Estudio de Belleza en Medellín</h3>
-        <ul>
-            <li>18-22 Consultas diarias.</li>
-            <li>7.5x ROI con $90/mes en Ads.</li>
-            <li>Setup: 6 días; Primeros leads: 36h.</li>
-        </ul>
-        <p>"¡Antes quemábamos plata en bots! RADAR nos dio leads que cierran solos. Recomendado 100%." – Ana G., Dueña de Salón.</p>
-
-        <div class="testimonials">
-            <div class="testimonial">
-                <p>"De 0 a 12 ventas/semana en 1 mes. Braulin es un genio con Meta." – Carlos M., Coach Online.</p>
-                <img src="https://via.placeholder.com/100x100?text=CM" alt="Carlos M." style="border-radius:50%; width:100px;">
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">¿Cuánto le cuesta no saber dónde están sus vehículos?</h2>
+                <p class="text-lg text-slate-600">Transformamos datos complejos en decisiones simples. Sistema Radar ataca directamente los problemas que drenan su rentabilidad.</p>
             </div>
-            <div class="testimonial">
-                <p>"Recuperó mi cuenta bloqueada y generó $3k en leads. ROI brutal." – Laura P., Tienda E-commerce.</p>
-                <img src="https://via.placeholder.com/100x100?text=LP" alt="Laura P." style="border-radius:50%; width:100px;">
-            </div>
-            <div class="testimonial">
-                <p>"Setup impecable, sin complicaciones. 25 mensajes/día desde día 3." – Diego R., Servicio Local.</p>
-                <img src="https://via.placeholder.com/100x100?text=DR" alt="Diego R." style="border-radius:50%; width:100px;">
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-radar-200 transition duration-300 group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-radar-600 transition">
+                        <svg class="w-8 h-8 text-radar-600 group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Seguridad Antirrobo</h3>
+                    <p class="text-slate-600">Duerma tranquilo. Reciba alertas instantáneas si un vehículo se mueve sin autorización. Incluye función de <strong>apagado remoto de motor</strong> desde su celular.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-radar-200 transition duration-300 group">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-green-600 transition">
+                        <svg class="w-8 h-8 text-green-600 group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3.895-3 2s1.343 2 3 2 3.895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Control de Gastos</h3>
+                    <p class="text-slate-600">Elimine rutas innecesarias y el uso personal de vehículos de la empresa. Nuestros clientes reportan un <strong>ahorro promedio del 15%</strong> en combustible el primer mes.</p>
+                </div>
+
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl hover:border-radar-200 transition duration-300 group">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-indigo-600 transition">
+                        <svg class="w-8 h-8 text-indigo-600 group-hover:text-white transition" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Gestión de Mantenimiento</h3>
+                    <p class="text-slate-600">Olvídese de las hojas de cálculo. El sistema le notifica automáticamente cuándo realizar cambios de aceite, rotación de gomas y renovaciones de seguro.</p>
+                </div>
             </div>
         </div>
-        <p><em>Meta Blueprint Certified | +100 Clientes | +$500k en Ads Gestionados</em></p>
-        <a href="https://wa.me/573148676490?text=¡Muéstrame%20más%20casos!" class="cta-button">Ver Más Pruebas</a>
+    </section>
 
-        <h2>Soporte Especial para Problemas Meta</h2>
-        <ul>
-            <li><span class="emoji">🚫</span> Cuentas bloqueadas: Recuperación en 48h.</li>
-            <li><span class="emoji">💳</span> Pagos rechazados: Configuro métodos válidos.</li>
-            <li><span class="emoji">⛔</span> Anuncios rechazados: Políticas al día.</li>
-        </ul>
-        <a href="https://wa.me/573148676490?text=¡Ayuda%20urgente%20con%20Meta!" class="cta-button">Ayuda Urgente Gratis</a>
+    <section id="funcionalidades" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6">Tecnología de Grado Aeronáutico al servicio de su empresa</h2>
+                    <p class="text-slate-400 text-lg mb-8">
+                        A diferencia de soluciones genéricas, Sistema Radar está optimizado por especialistas en automatización y sistemas de radar. Entendemos la importancia crítica de la precisión.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-radar-800 rounded-lg flex items-center justify-center text-radar-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">Geocercas Inteligentes</h4>
+                                <p class="text-slate-400 mt-1">Delimite zonas permitidas y prohibidas. Reciba alertas SMS/Email al instante si se infringen los límites.</p>
+                            </div>
+                        </div>
 
-        <h2>Beneficios que Cambian Tu Día a Día</h2>
-        <ul>
-            <li><span class="emoji">⏰</span> <strong>Ahorra 20h/Semana:</strong> Olvídate de setups eternos; enfócate en cerrar ventas.</li>
-            <li><span class="emoji">💰</span> <strong>Invierte con Seguridad:</strong> Dashboards en tiempo real: Ve ROI antes de escalar.</li>
-            <li><span class="emoji">📈</span> <strong>Escala Fácil:</strong> De manual a IA, sin costos ocultos. ¡Crece a tu ritmo!</li>
-        </ul>
-        <a href="https://example.com/guia-meta-ads.pdf" class="cta-button" download>Descarga Gratis: 5 Errores en Meta Ads</a> <!-- Reemplaza con tu PDF real -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-radar-800 rounded-lg flex items-center justify-center text-radar-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">Historial de 90 Días</h4>
+                                <p class="text-slate-400 mt-1">Reproduzca rutas pasadas como si fuera un video. Analice paradas, tiempos muertos y velocidades máximas.</p>
+                            </div>
+                        </div>
 
-        <h2>Soy Braulin Betancourt: Tu Aliado en Ads</h2>
-        <p>5+ años optimizando Meta Ads para +100 negocios en LatAm. Desarrollé RADAR™ para acabar con el desperdicio. Resultados medibles, no humo.</p>
-        <p><a href="https://linkedin.com/in/braulibetancourt" target="_blank">Conéctate en LinkedIn</a> | <strong>Garantía: Leads en 48h o devolución completa.</strong></p>
-        <a href="https://wa.me/573148676490?text=¡Hola%20Braulin,%20quiero%20charlar!" class="cta-button">Hablar con Braulin</a>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-radar-800 rounded-lg flex items-center justify-center text-radar-400">
+                                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold">Acceso Multiplataforma</h4>
+                                <p class="text-slate-400 mt-1">Controle su flota desde la oficina (Web) o en movimiento (App Android / iOS). Sus activos, siempre en su bolsillo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interfaz de Monitoreo" class="rounded-lg shadow-2xl border border-slate-700 opacity-90 hover:opacity-100 transition">
+                    <p class="text-center text-xs text-slate-500 mt-2">Interfaz intuitiva diseñada para operadores logísticos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h2>Preguntas Frecuentes</h2>
-        <h3>¿Cuánto cuesta?</h3>
-        <p>$67 (oferta hoy, valor $97). Incluye setup, campañas, IA Pro 12 meses. Gestión opcional $29/mes.</p>
+    <section id="planes" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-slate-900 mb-4">Inversión Transparente y Flexible</h2>
+                <p class="text-slate-600">Sin contratos forzosos a largo plazo. La seguridad debe ser simple.</p>
+            </div>
 
-        <h3>¿Necesito bots?</h3>
-        <p>No en Modo Base. Usa WhatsApp normal con plantillas. Automatización opcional.</p>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-center">
+                
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900">Personal</h3>
+                    <div class="my-4 flex items-baseline">
+                        <span class="text-4xl font-extrabold text-slate-900">RD$ 500</span>
+                        <span class="text-slate-500 ml-2">/mes</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-6">Protección esencial para su vehículo personal.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-slate-600">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Rastreo en tiempo real</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> App Móvil</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Apagado remoto</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 px-4 bg-slate-100 text-slate-700 font-bold text-center rounded-lg hover:bg-slate-200 transition">Seleccionar</a>
+                </div>
 
-        <h3>¿Tiempo de setup?</h3>
-        <p>5-7 días total. Leads en 24-48h post-lanzamiento.</p>
+                <div class="bg-white p-8 rounded-2xl border-2 border-radar-500 shadow-2xl relative transform md:-translate-y-4">
+                    <div class="absolute top-0 right-0 bg-radar-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">MÁS POPULAR</div>
+                    <h3 class="text-xl font-bold text-slate-900">Flota PYME</h3>
+                    <div class="my-4 flex items-baseline">
+                        <span class="text-4xl font-extrabold text-radar-600">RD$ 850</span>
+                        <span class="text-slate-500 ml-2">/mes</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-6">Control total para taxis, camiones y logística.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-slate-600">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-radar-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> <strong>Todo lo del plan Personal</strong></li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-radar-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Historial de 90 días</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-radar-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Alertas de Mantenimiento</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-radar-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Geocercas Ilimitadas</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 px-4 bg-radar-600 text-white font-bold text-center rounded-lg hover:bg-radar-700 transition shadow-lg">Elegir Plan</a>
+                </div>
 
-        <h3>¿Presupuesto Ads?</h3>
-        <p>$5-10/día mínimo ($150-300/mes) para probar. Escala según resultados.</p>
+                <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-900">Corporativo</h3>
+                    <div class="my-4 flex items-baseline">
+                        <span class="text-2xl font-bold text-slate-900">A Medida</span>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-6">Soluciones avanzadas para flotas grandes.</p>
+                    <ul class="space-y-4 mb-8 text-sm text-slate-600">
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Sensores de Combustible</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> API de Integración</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Soporte Prioritario 24/7</li>
+                    </ul>
+                    <a href="#contacto" class="block w-full py-3 px-4 bg-white border border-slate-300 text-slate-700 font-bold text-center rounded-lg hover:bg-slate-50 transition">Contactar Ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <h3>¿Funciona para mi negocio?</h3>
-        <p>Sí para servicios locales, e-learning, productos medio-alto ticket. No para prohibidos por Meta.</p>
+    <section id="nosotros" class="py-16 bg-white border-t border-slate-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Respaldo Técnico Especializado</h2>
+            <p class="text-slate-600 leading-relaxed">
+                Sistema Radar no es solo una plataforma de software; es una solución de ingeniería. 
+                Desarrollado con la experiencia de especialistas en <span class="font-semibold text-slate-800">Soporte y Automatización de Sistemas Radar</span> y tecnología aeronáutica. 
+                Aplicamos los mismos principios de fiabilidad y precisión de la aviación al monitoreo de su flota terrestre.
+            </p>
+        </div>
+    </section>
 
-        <h3>¿Garantías?</h3>
-        <p>Configuración impecable + leads en 48h garantizados. Si no, devolución 100%. Dependencia en tu cierre y Ads.</p>
+    <section id="contacto" class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20"></div>
+        
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="bg-radar-600 p-6 text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">Asegure su flota hoy</h2>
+                    <p class="text-radar-100">Déjenos sus datos. Un especialista le contactará en menos de 24h para una demostración gratuita.</p>
+                </div>
+                
+                <form class="p-8 md:p-10 space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Nombre Completo</label>
+                            <input type="text" placeholder="Ej. Juan Pérez" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-radar-500 focus:border-radar-500 outline-none transition bg-slate-50 focus:bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-1">Teléfono / WhatsApp</label>
+                            <input type="tel" placeholder="Ej. 809-555-5555" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-radar-500 focus:border-radar-500 outline-none transition bg-slate-50 focus:bg-white">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Correo Electrónico</label>
+                        <input type="email" placeholder="nombre@empresa.com" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-radar-500 focus:border-radar-500 outline-none transition bg-slate-50 focus:bg-white">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Tamaño de la Flota</label>
+                        <select class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-radar-500 focus:border-radar-500 outline-none transition bg-slate-50 focus:bg-white">
+                            <option value="" disabled selected>Seleccione una opción</option>
+                            <option value="1-5">1 - 5 Vehículos</option>
+                            <option value="6-20">6 - 20 Vehículos</option>
+                            <option value="21-50">21 - 50 Vehículos</option>
+                            <option value="50+">Más de 50 Vehículos</option>
+                        </select>
+                    </div>
 
-        <h3>¿Qué es la IA Pro?</h3>
-        <p>Google Veo 3: Crea 50+ videos pro para ads (valor $500). 2TB storage, 12 meses incluidos.</p>
+                    <div class="pt-4">
+                        <button type="button" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-4 rounded-lg shadow-xl transition transform hover:-translate-y-0.5 text-lg">
+                            Solicitar Información y Demo
+                        </button>
+                        <p class="text-center text-xs text-slate-400 mt-4 flex justify-center items-center gap-1">
+                            <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+                            Sus datos están seguros y encriptados.
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
-        <h3>¿Cómo empiezo?</h3>
-        <ol>
-            <li>Clic en CTA y chatea por WhatsApp.</li>
-            <li>Diagnóstico 30 min gratis.</li>
-            <li>Pago seguro vía [Stripe/PayPal].</li>
-            <li>Setup inicia en 24h. ¡Leads en días!</li>
-        </ol>
-        <a href="https://wa.me/573148676490?text=¡Listo%20para%20empezar!" class="cta-button">¡Inicia Tu Transformación!</a>
-    </div>
-
-    <footer style="background:#333; color:white; text-align:center; padding:20px; margin-top:40px;">
-        <p>&copy; 2025 Braulin Betancourt. Todos los derechos reservados. | <a href="#privacy" style="color:#ccc;">Privacidad</a></p>
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <span class="font-bold text-2xl text-white tracking-tight">Sistema<span class="text-radar-500">Radar</span></span>
+                    <p class="mt-4 text-sm max-w-xs leading-relaxed">
+                        Soluciones de rastreo satelital desarrolladas con precisión técnica para la seguridad de activos en la República Dominicana.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Plataforma</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beneficios" class="hover:text-radar-400 transition">Beneficios</a></li>
+                        <li><a href="#funcionalidades" class="hover:text-radar-400 transition">Funcionalidades</a></li>
+                        <li><a href="https://platform.sistemaradar.com" class="hover:text-radar-400 transition font-semibold text-radar-500">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg> Santo Domingo, RD</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> braulinfb@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2024 Braulin Sisa Vargas / Sistema Radar. Todos los derechos reservados.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacidad</a>
+                    <a href="#" class="hover:text-white transition">Términos de Uso</a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
