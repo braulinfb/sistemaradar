@@ -1,205 +1,446 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistema RADAR™ → 15-30 Mensajes Diarios en WhatsApp o Te Devuelvo Tu Dinero | Braulin Betancourt</title>
-  <meta name="description" content="Setup completo en 7 días + 3 campañas base + IA Pro 12 meses. Solo $67 USD (descuento actual). Solo 3 cupos este mes." />
-  <!-- Open Graph / Twitter -->
-  <meta property="og:title" content="Sistema RADAR™ → Mensajes Diarios o Dinero Devuelto" />
-  <meta property="og:description" content="Configuro todo tu Meta Ads + WhatsApp para que solo atiendas clientes. 7 días o te devuelvo el 100%." />
-  <meta property="og:image" content="https://braulinfb.github.io/sistemaradar/assets/img/braulin-betancourt-1200.jpg" />
-  <meta property="og:url" content="https://braulinfb.github.io/sistemaradar/" />
-  <meta name="twitter:card" content="summary_large_image" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braulin Betancourt — Sistema RADAR™: Meta Ads + WhatsApp = Clientes</title>
+    <meta name="description" content="Sistema RADAR™: configuro tu ecosistema de Meta Ads + WhatsApp para generar clientes reales. Setup en 5–7 días.">
+    
+    <meta property="og:title" content="Sistema RADAR™ — Convierte Meta Ads en Clientes por WhatsApp" />
+    <meta property="og:description" content="Setup completo + campañas a WhatsApp. 3 anuncios iniciales, IA Pro 12 meses y capacitación." />
+    <meta property="og:image" content="assets/img/braulin-betancourt-1200.jpg" />
+    <meta property="og:type" content="website" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Favicon (el mismo que ya tenías) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='15' fill='%230b0b0b'/><rect x='8' y='8' width='84' height='84' rx='12' fill='none' stroke='%23D4AF37' stroke-width='2'/><text x='50' y='58' font-family='Arial,sans-serif' font-size='36' font-weight='800' text-anchor='middle' dominant-baseline='central' fill='%23D4AF37'>BFB</text></svg>">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#fbbf24',
+                            500: '#D4AF37', /* Tu dorado original */
+                            600: '#b49428',
+                        },
+                        dark: {
+                            900: '#0b0b0b', /* Tu negro original */
+                            800: '#121212',
+                            700: '#1a1a1a'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #0b0b0b; color: #f3f4f6; }
+        .gold-gradient-text {
+            background: linear-gradient(to right, #fbbf24, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Animación suave para detalles */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        .glow-effect { box-shadow: 0 0 25px rgba(212, 175, 55, 0.15); }
+    </style>
 
-  <!-- Meta Pixel (cambia TU_PIXEL_ID) -->
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'TU_PIXEL_ID');
+    fbq('init', 'TU_PIXEL_ID'); // RECUERDA PONER TU ID AQUÍ SI NO ESTÁ
     fbq('track', 'PageView');
-  </script>
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=TU_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
+    </head>
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --black:#0b0b0b; --dark:#121212; --white:#ffffff; --gold:#D4AF37; --gold2:#c9a02e; --red:#ff3b30;
-      --max:1200px; --radius:16px; --shadow:0 12px 32px rgba(0,0,0,.4);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--white);line-height:1.6}
-    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
-    h1,h2,h3{font-weight:900}
-    .h1{font-size:clamp(2.2rem,5.5vw,3.6rem);line-height:1.15}
-    .accent{color:var(--gold)}
-    .btn{background:var(--gold);color:#000;padding:18px 36px;border-radius:999px;font-weight:900;font-size:1.1rem;
-         display:inline-flex;align-items:center;gap:10px;text-decoration:none;box-shadow:0 10px 30px rgba(212,175,55,.4);transition:.3s}
-    .btn:hover{background:var(--gold2);transform:translateY(-3px)}
-    .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(212,175,55,.12);border:1px solid rgba(212,175,55,.4);
-         padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:700}
-    .tag-alert{background:rgba(255,59,48,.15);border-color:rgba(255,59,48,.5);color:#ffcccc}
-    .big-number{font-size:clamp(3rem,7vw,5rem);font-weight:900;color:var(--gold)}
-    .urgency{background:var(--red);color:white;padding:16px 24px;border-radius:12px;font-weight:800;animation:pulse 2s infinite}
-    @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
-    .float-cta{position:fixed;bottom:20px;right:20px;z-index:999;background:var(--gold);color:#000;padding:16px 28px;
-               border-radius:50px;font-weight:900;box-shadow:0 12px 40px rgba(0,0,0,.5);font-size:1.1rem}
-    section{padding:90px 0}
-    .grid{display:grid;gap:30px}
-    @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:1fr 1fr}}
-    .card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-    .center{text-align:center}
-    .mb-20{margin-bottom:20px}
-    .mt-32{margin-top:32px}
-  </style>
-</head>
-<body>
+<body class="antialiased font-sans">
 
-  <!-- CTA FLOTANTE -->
-  <a href="https://wa.me/573148676490?text=¡Braulin!%20Reserva%20mi%20cupo%20RADAR™%20antes%20de%20que%20se%20agoten%20(%2467)" 
-     class="float-cta" target="_blank">
-    🔥 SOLO 3 CUPOS → Activar RADAR™ YA
-  </a>
+    <header class="relative overflow-hidden pt-20 pb-24 lg:pt-32 lg:pb-32 bg-[url('assets/img/bg-texture.jpg')] bg-cover bg-no-repeat bg-fixed">
+        <div class="absolute inset-0 bg-gradient-to-b from-dark-900 via-dark-900/90 to-dark-900"></div>
 
-  <!-- HERO POTENCIADO -->
-  <section style="padding:100px 0;text-align:center;background:radial-gradient(circle at top right,rgba(212,175,55,.15),transparent 60%),var(--black)">
-    <div class="container">
-      <p style="color:var(--gold);font-weight:800;letter-spacing:2px">BRAULIN FERNANDO BETANCOURT · ESPECIALISTA META ADS</p>
-      <h1 class="h1">Despierta con <span class="accent">15-30 mensajes de clientes listos para comprar</span><br>aunque nunca hayas configurado una campaña</h1>
-      <p style="font-size:1.3rem;max-width:900px;margin:30px auto">
-        Te entrego el <strong>Sistema RADAR™ 100% hecho</strong>: Meta verificado + campañas con IA + WhatsApp listo para vender<br>
-        <strong style="color:var(--gold)">Resultados en 7 días o te devuelvo cada peso</strong>
-      </p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <span class="inline-block py-1 px-4 rounded-full bg-dark-800 border border-gold-500/30 text-gold-400 text-xs font-bold tracking-widest uppercase mb-6 shadow-[0_0_15px_rgba(212,175,55,0.2)]">
+                    Braulin Fernando Betancourt · Especialista Meta Ads
+                </span>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                    Multiplica tus ventas con el <br>
+                    <span class="gold-gradient-text">Sistema RADAR™</span>
+                </h1>
+                
+                <p class="mt-4 text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed font-light">
+                    Configuro tu ecosistema de <strong>Meta Ads + WhatsApp</strong> para generar clientes reales. Sin bots obligatorios, sin complicaciones técnicas. <span class="text-gold-500 font-semibold">Setup completo en 5–7 días.</span>
+                </p>
 
-      <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:40px 0">
-        <div class="big-number">+40K</div>
-        <div class="big-number">15-30</div>
-        <div class="big-number">2.8x</div>
-      </div>
-      <div style="font-size:1rem;color:#ccc">
-        USD gestionados  Mensajes diarios  ROI promedio 60 días
-      </div>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+                    <a href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20implementar%20el%20Sistema%20RADAR%E2%84%A2%20en%20mi%20negocio.%20Tengo%20material%20(s%C3%AD%2Fno).%20Presupuesto%20mensual%3A%20%5B____%5D.%20%C2%BFC%C3%B3mo%20empezamos%3F" 
+                       target="_blank"
+                       class="cta-whatsapp bg-gold-500 hover:bg-gold-400 text-black font-extrabold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(212,175,55,0.4)] flex items-center justify-center gap-2"
+                       data-placement="hero">
+                       <i class="fa-brands fa-whatsapp text-xl"></i> QUIERO EL SISTEMA RADAR™
+                    </a>
+                </div>
+                
+                <div class="bg-dark-800/80 border-l-4 border-gold-500 p-4 max-w-2xl mx-auto rounded-r-lg text-left backdrop-blur-sm">
+                    <p class="text-sm text-gray-300">
+                        <strong class="text-gold-500">INCLUYE:</strong> Montaje completo + <strong>3 campañas</strong> + <strong>3 anuncios</strong> (con tu material) + Capacitación + <strong class="text-white border-b border-gold-500">IA Pro 12 meses GRATIS</strong> (Veo 3, 1000 créditos, 2TB).
+                    </p>
+                </div>
 
-      <div class="urgency mt-32">⚡ SOLO 3 CUPOS DISPONIBLES ESTE MES · Precio sube en 48h</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-12 border-t border-gray-800 pt-8">
+                    <div>
+                        <p class="text-gold-400 text-3xl font-bold">+40k</p>
+                        <p class="text-gray-500 text-xs uppercase tracking-wider">USD Gestionados</p>
+                    </div>
+                    <div>
+                        <p class="text-gold-400 text-3xl font-bold">15-30</p>
+                        <p class="text-gray-500 text-xs uppercase tracking-wider">Mensajes/Día*</p>
+                    </div>
+                    <div>
+                        <p class="text-gold-400 text-3xl font-bold">2.8x</p>
+                        <p class="text-gray-500 text-xs uppercase tracking-wider">ROI Promedio</p>
+                    </div>
+                    <div>
+                        <p class="text-gold-400 text-3xl font-bold">5-7</p>
+                        <p class="text-gray-500 text-xs uppercase tracking-wider">Días Setup</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <div style="margin-top:40px">
-        <a href="https://wa.me/573148676490?text=¡Braulin!%20Quiero%20mi%20Sistema%20RADAR™%20por%20%2467%20y%20aprovechar%20el%20descuento" 
-           class="btn" style="font-size:1.4rem;padding:22px 50px">
-          Sí, quiero activar mi RADAR™ ahora ($67)
-        </a>
-      </div>
-    </div>
-  </section>
+    <section class="py-20 bg-dark-900 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">
+                Si tu marketing no funciona, <span class="text-gold-500">estás perdiendo dinero hoy</span>
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-dark-800 border border-gray-800 hover:border-gold-500/30 transition duration-300 group">
+                    <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold-500/20 transition">
+                        <i class="fa-solid fa-bullhorn text-gold-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Botón "Promocionar"</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Al inicio funciona, luego se estanca. Sin estrategia ni segmentación real, es como tirar monedas a una fuente esperando un deseo.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-dark-800 border border-gray-800 hover:border-gold-500/30 transition duration-300 group">
+                    <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold-500/20 transition">
+                        <i class="fa-solid fa-ban text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Bloqueos de Meta</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Cuentas inhabilitadas, pagos rechazados. Parte de mi servicio es recuperar activos y blindar tu estructura.
+                    </p>
+                </div>
+                <div class="p-8 rounded-2xl bg-dark-800 border border-gray-800 hover:border-gold-500/30 transition duration-300 group">
+                    <div class="w-12 h-12 bg-dark-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold-500/20 transition">
+                        <i class="fa-solid fa-robot text-gold-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Sin Sistema Claro</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Depender de la suerte no es negocio. Necesitas un flujo predecible de mensajes a WhatsApp todos los días.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- DOLOR -->
-  <section class="container center">
-    <h2 class="h1">Si tu marketing NO funciona así,<br>estás <span class="accent">perdiendo ventas todos los días</span></h2>
-    <div class="grid grid-3 mt-32">
-      <div class="card"><h3>🔴 Botón “Promocionar” que ya no rinde</h3></div>
-      <div class="card"><h3>🔴 Cuentas bloqueadas o suspendidas</h3></div>
-      <div class="card"><h3>🔴 Solo llegan “¿Cuánto cuesta?” o curiosos</h3></div>
-    </div>
-  </section>
+    <section class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gold-500/5 blur-[120px]"></div>
 
-  <!-- SOLUCIÓN (tus 6 módulos originales, solo con copy más fuerte) -->
-  <section style="background:var(--dark)">
-    <div class="container center">
-      <h2 class="h1">Tu <span class="accent">Sistema RADAR™</span> 100% listo para usar</h2>
-      <p style="font-size:1.2rem;max-width:800px;margin:20px auto">Yo configuro todo. Tú solo recibes mensajes y cierras ventas.</p>
-      <div class="grid grid-3 mt-32">
-        <div class="card"><img src="assets/img/configuracion-pro-meta.jpg" alt="" style="border-radius:12px;margin-bottom:16px"><h3>Configuración Pro en Meta</h3></div>
-        <div class="card"><img src="assets/img/campanas-conversion.jpg" alt="" style="border-radius:12px;margin-bottom:16px"><h3>Campañas que convierten</h3></div>
-        <div class="card"><h3>Proceso de ventas en WhatsApp</h3></div>
-        <div class="card"><h3>Prevención de bloqueos</h3></div>
-        <div class="card"><h3>Asesoría en creativos con IA</h3></div>
-        <div class="card"><h3>Medición clara del retorno</h3></div>
-      </div>
-    </div>
-  </section>
+        <div class="max-w-6xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Tu Sistema, Tus Reglas</h2>
+                <p class="text-gray-400">Yo lo configuro. Tú solo atiendes y vendes. Elige tu nivel de operación:</p>
+            </div>
 
-  <!-- PROCESO 7 DÍAS -->
-  <section class="container center">
-    <h2 class="h1">De cero a <span class="accent">mensajes diarios en solo 7 días</span></h2>
-    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:40px">
-      <div class="card" style="width:260px"><h3 style="color:var(--gold)">Día 1-2</h3><p>Diagnóstico + Setup técnico completo</p></div>
-      <div class="card" style="width:260px"><h3 style="color:var(--gold)">Día 3-5</h3><p>Lanzamiento de campañas con tu material</p></div>
-      <div class="card" style="width:260px"><h3 style="color:var(--gold)">Día 6-7</h3><p>Optimización + Capacitación</p></div>
-      <div class="card" style="width:260px"><h3 style="color:var(--gold)">Día 8+</h3><p>Soporte ilimitado</p></div>
-    </div>
-  </section>
+            <div class="flex justify-center gap-4 mb-10" id="mode-tabs">
+                <button onclick="switchTab('base')" id="btn-base" class="px-6 py-3 rounded-full font-bold border border-gold-500 bg-gold-500 text-black transition-all shadow-lg hover:scale-105">
+                    🔹 Modo Base (Recomendado)
+                </button>
+                <button onclick="switchTab('avanzado')" id="btn-adv" class="px-6 py-3 rounded-full font-bold border border-gray-700 bg-dark-800 text-gray-400 hover:text-white transition-all">
+                    ⚙️ Modo Avanzado (Opcional)
+                </button>
+            </div>
 
-  <!-- QUÉ PONGO YO vs TÚ -->
-  <section style="background:var(--dark)" class="container">
-    <h2 class="h1 center">¿Qué pongo <span class="accent">yo</span> y qué pones <span class="accent">tú</span>?</h2>
-    <div class="grid grid-2 mt-32">
-      <div class="card">
-        <h3 style="color:var(--gold)">Yo me encargo de TODO lo técnico</h3>
-        <ul style="font-size:1.1rem;line-height:1.8">
-          <li>Configuración completa de Meta</li>
-          <li>3 campañas base + 3 anuncios iniciales</li>
-          <li>Capacitación + plantillas</li>
-          <li>IA Pro 12 meses incluida</li>
-          <li>Desbloqueo y prevención de cuentas</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3 style="color:var(--gold)">Tú solo aportas</h3>
-        <ul style="font-size:1.1rem;line-height:1.8">
-          <li>Videos/fotos de tu producto</li>
-          <li>Atender WhatsApp y cerrar ventas</li>
-          <li>Tu presupuesto de anuncios (mín. $5-10/día)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+            <div class="max-w-4xl mx-auto">
+                
+                <div id="panel-base" class="bg-dark-800 border border-gold-500/30 rounded-2xl p-8 md:p-12 shadow-[0_0_30px_rgba(212,175,55,0.1)]">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-4">Modo Base <span class="text-gold-500 text-sm align-middle ml-2 bg-gold-500/10 px-2 py-1 rounded">INCLUIDO EN EL PRECIO</span></h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-gold-500 mt-1 mr-3"></i> Atención por WhatsApp manual (más humano).</li>
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-gold-500 mt-1 mr-3"></i> 3 Campañas + 3 Anuncios listos.</li>
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-gold-500 mt-1 mr-3"></i> Guiones de respuestas rápidas y etiquetas.</li>
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-check text-gold-500 mt-1 mr-3"></i> <strong>Ideal para:</strong> 0-30 chats/día y presupuestos ajustados.</li>
+                            </ul>
+                            <a href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20activar%20el%20Modo%20Base%20del%20Sistema%20RADAR%E2%84%A2%20con%20la%20promoci%C3%B3n%20de%20%2467." 
+                               class="cta-whatsapp inline-block bg-white text-black font-bold py-3 px-6 rounded-lg hover:bg-gray-200 transition">
+                                Empezar con Modo Base
+                            </a>
+                        </div>
+                        <div class="w-full md:w-1/3 bg-dark-900 p-6 rounded-xl text-center border border-gray-800">
+                            <i class="fa-brands fa-whatsapp text-6xl text-green-500 mb-4"></i>
+                            <p class="font-bold text-white">Sin Software Extra</p>
+                            <p class="text-xs text-gray-500 mt-2">Usamos WhatsApp Business normal.</p>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- RESULTADOS + TESTIMONIOS (tus fotos originales) -->
-  <section class="container center">
-    <h2 class="h1">Dueños de negocio como tú ya lo están logrando</h2>
-    <div class="grid grid-3 mt-32">
-      <div class="card center">
-        <img src="assets/img/testimonial-andrea.jpg" width="100" style="border-radius:50%;margin-bottom:12px">
-        <strong>Andrea · Tienda</strong><p style="font-size:1.4rem;color:var(--gold)">“De 0 a 23 mensajes la primera semana”</p>
-      </div>
-      <div class="card center">
-        <img src="assets/img/testimonial-jose.jpg" width="100" style="border-radius:50%;margin-bottom:12px">
-        <strong>José · Servicios</strong><p style="font-size:1.4rem;color:var(--gold)">“Recuperó mi cuenta y ahora gano $1800/mes”</p>
-      </div>
-      <div class="card center">
-        <img src="assets/img/testimonial-maria.jpg" width="100" style="border-radius:50%;margin-bottom:12px">
-        <strong>María · Belleza</strong><p style="font-size:1.4rem;color:var(--gold)">“100% agendada gracias al sistema”</p>
-      </div>
-    </div>
-  </section>
+                <div id="panel-avanzado" class="hidden bg-dark-800 border border-gray-700 rounded-2xl p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-4">Modo Avanzado <span class="text-blue-400 text-sm align-middle ml-2 bg-blue-500/10 px-2 py-1 rounded">SE COTIZA APARTE</span></h3>
+                            <ul class="space-y-3 mb-6">
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-robot text-blue-400 mt-1 mr-3"></i> Automatización (ChatGPT API / n8n / Bots).</li>
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-bolt text-blue-400 mt-1 mr-3"></i> Respuestas inmediatas 24/7.</li>
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-filter text-blue-400 mt-1 mr-3"></i> Pre-calificación automática de leads.</li>
+                                <li class="flex items-start text-gray-300"><i class="fa-solid fa-arrow-up-right-dots text-blue-400 mt-1 mr-3"></i> <strong>Ideal para:</strong> +30 chats/día o escalar masivamente.</li>
+                            </ul>
+                            <a href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20me%20interesa%20el%20Modo%20Avanzado%20(automatizado)%20del%20Sistema%20RADAR%E2%84%A2.%20%C2%BFMe%20das%20detalles%20y%20cotizaci%C3%B3n%3F" 
+                               class="cta-whatsapp inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-500 transition">
+                                Cotizar Automatización
+                            </a>
+                        </div>
+                        <div class="w-full md:w-1/3 bg-dark-900 p-6 rounded-xl text-center border border-gray-800">
+                            <i class="fa-solid fa-network-wired text-6xl text-blue-500 mb-4"></i>
+                            <p class="font-bold text-white">Escalabilidad Total</p>
+                            <p class="text-xs text-gray-500 mt-2">Requiere costos de API según uso.</p>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- GARANTÍA FINAL + CTA POTENTE -->
-  <section style="background:var(--gold);color:#000;padding:100px 0;text-align:center">
-    <div class="container">
-      <h2 class="h1" style="font-size:3rem">Garantía RADAR™ de Hierro</h2>
-      <p style="font-size:1.8rem;max-width:900px;margin:30px auto">
-        Si en 7 días no tienes tu sistema funcionando y recibiendo mensajes,<br>
-        <strong>te devuelvo el 100% de tu dinero. Sin preguntas.</strong>
-      </p>
-      <div class="urgency" style="display:inline-block;font-size:1.4rem">⏰ SOLO 3 CUPOS ESTE MES</div>
-      <br><br>
-      <a href="https://wa.me/573148676490?text=¡Braulin!%20Reserva%20mi%20cupo%20RADAR™%20por%20%2467%20antes%20de%20que%20suba" 
-         class="btn" style="background:#000;color:var(--gold);font-size:1.6rem;padding:28px 60px">
-        RESERVAR MI CUPO AHORA ($67)
-      </a>
-    </div>
-  </section>
+            </div>
+        </div>
+    </section>
 
-  <!-- WHATSAPP FLOTANTE (repetido por si se pierde) -->
-  <a href="https://wa.me/573148676490?text=¡Hola%20Braulin!%20Quiero%20el%20Sistema%20RADAR™" 
-     class="float-cta" style="background:#25D366;color:white;left:20px;right:auto">
-    💬 WhatsApp
-  </a>
+    <section class="py-20 bg-dark-900">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16">Resultados Reales</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-dark-800 p-6 rounded-xl border border-gray-800">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/img/testimonial-andrea.jpg" alt="Andrea" class="w-12 h-12 rounded-full object-cover border border-gold-500">
+                        <div>
+                            <p class="font-bold text-white">Andrea</p>
+                            <p class="text-xs text-gold-500">Tienda de Accesorios</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm italic">"Pasé de 0 a 23 mensajes en la primera semana. El ROI fue de 3.2x en el primer mes. Ahora escalo con confianza."</p>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-xl border border-gray-800">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/img/testimonial-jose.jpg" alt="José" class="w-12 h-12 rounded-full object-cover border border-gold-500">
+                        <div>
+                            <p class="font-bold text-white">José</p>
+                            <p class="text-xs text-gold-500">Servicios Técnicos</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm italic">"Mi cuenta estuvo bloqueada 3 semanas. Braulin la recuperó en 4 días y montó campañas que hoy me generan $1,800 USD/mes."</p>
+                </div>
+                <div class="bg-dark-800 p-6 rounded-xl border border-gray-800">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img src="assets/img/testimonial-maria.jpg" alt="María" class="w-12 h-12 rounded-full object-cover border border-gold-500">
+                        <div>
+                            <p class="font-bold text-white">María</p>
+                            <p class="text-xs text-gold-500">Estudio de Belleza</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm italic">"No sabía nada de anuncios. El sistema es claro, fácil de seguir y ahora vivo 100% agendada. Mejor inversión."</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-dark-800/50 p-6 rounded-lg border border-dashed border-gray-700 max-w-2xl mx-auto text-center">
+                <p class="text-gold-500 font-bold mb-2">📊 Caso Destacado: Estudio en Medellín</p>
+                <p class="text-gray-300 text-sm">
+                    Inversión: <strong>$90 USD/mes</strong> → Resultado: <strong>18-22 consultas diarias</strong> (ROI 7.5x).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-black border-y border-gray-900">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+                <img src="assets/img/braulin-betancourt-1200.jpg" alt="Braulin Fernando Betancourt" class="rounded-lg shadow-[0_0_20px_rgba(212,175,55,0.2)] border border-gray-800 w-full max-w-md mx-auto">
+            </div>
+            <div class="w-full md:w-1/2">
+                <span class="text-gold-500 font-bold tracking-widest text-sm uppercase">Sobre Mí</span>
+                <h2 class="text-3xl font-bold text-white mt-2 mb-6">Braulin Fernando Betancourt</h2>
+                <p class="text-gray-400 mb-4">
+                    Desde 2017 he gestionado <strong>más de $40,000 USD</strong> en campañas. Trabajo desde Venezuela para toda Latinoamérica.
+                </p>
+                <p class="text-gray-400 mb-6">
+                    Mi enfoque no es "hacer likes", es hacer dinero. Si tu WhatsApp no suena, mi trabajo no sirve. Por eso diseño sistemas de venta, no solo anuncios bonitos.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-dark-800 rounded-full text-xs border border-gray-700 text-gray-300">Meta Ads Manager</span>
+                    <span class="px-3 py-1 bg-dark-800 rounded-full text-xs border border-gray-700 text-gray-300">WhatsApp Marketing</span>
+                    <span class="px-3 py-1 bg-dark-800 rounded-full text-xs border border-gray-700 text-gray-300">Estrategia IA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-dark-900">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-10">Preguntas y Precios</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-gradient-to-r from-dark-800 to-dark-700 p-6 rounded-xl border border-gold-500/40">
+                    <h3 class="text-xl font-bold text-white mb-2">¿Cuánto cuesta el Setup Inicial?</h3>
+                    <div class="flex items-baseline gap-3 mb-2">
+                        <span class="text-3xl font-bold text-gold-400">$67 USD</span>
+                        <span class="text-sm text-gray-500 line-through">$97 USD</span>
+                        <span class="text-xs bg-red-900/50 text-red-400 px-2 py-1 rounded">Oferta Limitada</span>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-4">
+                        Pago único. Incluye configuración total, 3 campañas, 3 anuncios, capacitación y <strong>12 Meses de IA Pro Gratis</strong>.
+                    </p>
+                    <p class="text-xs text-gray-500">*La gestión mensual (opcional) es de $29 USD/mes.</p>
+                </div>
+
+                <details class="group bg-dark-800 p-4 rounded-lg border border-gray-800 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-white">
+                        ¿Necesito pagar software extra?
+                        <span class="transition-transform group-open:rotate-180 text-gold-500">▼</span>
+                    </summary>
+                    <p class="text-gray-400 mt-3 text-sm pl-4 border-l-2 border-gold-500">
+                        NO. El sistema "Modo Base" funciona con WhatsApp Business gratuito. La automatización es 100% opcional.
+                    </p>
+                </details>
+
+                <details class="group bg-dark-800 p-4 rounded-lg border border-gray-800 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-white">
+                        ¿Quién hace los videos e imágenes?
+                        <span class="transition-transform group-open:rotate-180 text-gold-500">▼</span>
+                    </summary>
+                    <p class="text-gray-400 mt-3 text-sm pl-4 border-l-2 border-gold-500">
+                        Para arrancar, tú me das el material y yo monto los 3 primeros anuncios. Luego te doy plantillas para que puedas renovar tú mismo fácilmente.
+                    </p>
+                </details>
+
+                <details class="group bg-dark-800 p-4 rounded-lg border border-gray-800 cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-white">
+                        ¿Qué pasa si me bloquean?
+                        <span class="transition-transform group-open:rotate-180 text-gold-500">▼</span>
+                    </summary>
+                    <p class="text-gray-400 mt-3 text-sm pl-4 border-l-2 border-gold-500">
+                        Trabajo con estructura segura. Si pasa, te ayudo a apelar y recuperar sin costo adicional durante el setup.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 bg-black text-center border-t border-gray-900 relative">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="inline-block bg-red-900/20 border border-red-900/50 text-red-400 px-4 py-1 rounded-full text-xs font-bold mb-6 animate-pulse">
+                🔥 Solo quedan 3 cupos disponibles este mes
+            </div>
+            <h2 class="text-4xl font-bold text-white mb-6">¿Listo para activar tu Sistema RADAR™?</h2>
+            <p class="text-gray-400 mb-10 text-lg">
+                Escríbeme ahora. Sin bots obligatorios. Sin tecnicismos. Con resultados.
+            </p>
+            
+            <a href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20activar%20mi%20Sistema%20RADAR%E2%84%A2%20y%20aprovechar%20la%20promoci%C3%B3n%20de%20%2467%20USD.%20Tengo%20material%20(s%C3%AD%2Fno).%20Presupuesto%3A%20%5B____%5D." 
+               target="_blank"
+               class="cta-whatsapp inline-block bg-gold-500 hover:bg-gold-400 text-black font-extrabold py-5 px-10 rounded-lg text-xl shadow-[0_0_25px_rgba(212,175,55,0.5)] transition hover:scale-105"
+               data-placement="cta-final">
+               💬 QUIERO EMPEZAR AHORA
+            </a>
+            
+            <p class="text-gray-600 text-xs mt-12">
+                &copy; 2024 Braulin Betancourt. Todos los derechos reservados.<br>
+                Este sitio no es parte de Facebook o Facebook Inc.
+            </p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/573148676490?text=Hola%20Braulin%2C%20quiero%20conocer%20el%20Sistema%20RADAR%E2%84%A2%3A%20qu%C3%A9%20incluye%20y%20c%C3%B3mo%20empezamos%3F" 
+       target="_blank"
+       class="cta-whatsapp fixed bottom-6 right-6 bg-green-500 hover:bg-green-400 text-white p-4 rounded-full shadow-2xl z-50 transition transform hover:scale-110 flex items-center gap-2 font-bold"
+       data-placement="float">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="hidden md:inline">WhatsApp Directo</span>
+    </a>
+
+    <script>
+        // Lógica de Tabs (Modo Base vs Avanzado)
+        function switchTab(tab) {
+            const panelBase = document.getElementById('panel-base');
+            const panelAdv = document.getElementById('panel-avanzado');
+            const btnBase = document.getElementById('btn-base');
+            const btnAdv = document.getElementById('btn-adv');
+
+            if(tab === 'base') {
+                panelBase.classList.remove('hidden');
+                panelAdv.classList.add('hidden');
+                
+                // Estilos Botones
+                btnBase.classList.add('bg-gold-500', 'text-black', 'border-gold-500');
+                btnBase.classList.remove('bg-dark-800', 'text-gray-400', 'border-gray-700');
+                
+                btnAdv.classList.add('bg-dark-800', 'text-gray-400', 'border-gray-700');
+                btnAdv.classList.remove('bg-gold-500', 'text-black', 'border-gold-500'); // Corregido: no quitar lo que no tiene, pero asegurar limpieza
+                
+                // Track Event
+                if(typeof fbq !== 'undefined') fbq('trackCustom','ViewModeBase');
+            } else {
+                panelBase.classList.add('hidden');
+                panelAdv.classList.remove('hidden');
+
+                // Estilos Botones
+                btnAdv.classList.add('bg-blue-600', 'text-white', 'border-blue-600');
+                btnAdv.classList.remove('bg-dark-800', 'text-gray-400', 'border-gray-700');
+                
+                btnBase.classList.add('bg-dark-800', 'text-gray-400', 'border-gray-700');
+                btnBase.classList.remove('bg-gold-500', 'text-black', 'border-gold-500');
+
+                // Track Event
+                if(typeof fbq !== 'undefined') fbq('trackCustom','ViewModeAdvanced');
+            }
+        }
+
+        // Tracking Avanzado (Scroll & WhatsApp Clicks)
+        document.querySelectorAll('.cta-whatsapp').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const placement = btn.getAttribute('data-placement') || 'unknown';
+                if(typeof fbq !== 'undefined') {
+                    fbq('track', 'Contact');
+                    fbq('trackCustom', 'WhatsAppClick', { placement: placement });
+                }
+                console.log('WhatsApp Click:', placement);
+            });
+        });
+
+        // Scroll Depth Tracker
+        let scrolled50 = false;
+        window.addEventListener('scroll', () => {
+            const scrollPct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if(scrollPct > 50 && !scrolled50) { 
+                scrolled50 = true; 
+                if(typeof fbq !== 'undefined') fbq('trackCustom', 'Scroll50'); 
+            }
+        });
+    </script>
 </body>
 </html>
